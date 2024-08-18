@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HonestPedia</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/c695495eed.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="../Home/Home.html" class="navbar-item"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="../Transaction/transaction.html" class="navbar-item"><i class="fa-solid fa-file-invoice"></i>Notification</a>
+            <div class="navbar-item search-bar"> <!-- Change this to a div -->
+                <input type="text" placeholder="Search..."> <!-- Change to an input element -->
+                <button type="submit"><i class="fa-solid fa-search"></i></button> <!-- Add a search button -->
+            </div>
+        </div>
+        <div class="navbar-right">
+            <a href="../Login/login.php" class="navbar-item">Sign In</a>
+            <a href="../Login/login.php" class="navbar-item">Sign Up</a>
+        </div>
+    </nav>
+
+    <!-- Galeri Gambar -->
+    <div class="slides">
+        <button class="prev"><i class="fas fa-chevron-left"></i></button>
+        <div class="slide slide-1">
+            <img src="../Home/Ruby.jpg" alt="">
+        </div>
+        <div class="slide slide-2">
+            <img src="../Home/All Star.jpg" alt="">
+        </div>
+        <div class="slide slide-3">
+            <img src="../Home/Lesley.jpg" alt="">
+        </div>
+        <button class="next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <div class="recommendation-section">
+        <h3>Recommendation</h3>
+    
+        <!-- Container for Recommendation Boxes -->
+        <div class="container">
+            <!-- First Box: Medical Check Up -->
+            <a href="../Login/login.php" class="box">
+                <i class="fas fa-notes-medical"></i> <!-- Icon for Medical Check Up -->
+                <span class="box-text">Medical<br>Record</span> <!-- Text for Medical Check Up -->
+                <i class="fas fa-chevron-right"></i>
+            </a>
+    
+            <!-- Second Box: Medical Appointment -->
+            <a href="../MedicalAppointment/med-appointment.html" class="box">
+                <i class="fas fa-calendar-check"></i> <!-- Icon for Medical Appointment -->
+                <span class="box-text">Medical<br>Appointment</span> <!-- Text for Medical Appointment -->
+                <i class="fas fa-chevron-right"></i>
+            </a>
+    
+            <!-- Third Box: Online Consultation -->
+            <a href="online_consultation.html" class="box">
+                <i class="fas fa-comments"></i> <!-- Icon for Online Consultation -->
+                <span class="box-text">Online<br>Consultation</span> <!-- Text for Online Consultation -->
+                <i class="fas fa-chevron-right"></i>
+            </a>
+    
+            <!-- Fourth Box: Disease Detector -->
+            <a href="disease_detector.html" class="box">
+                <i class="fas fa-virus"></i> <!-- Icon for Disease Detector -->
+                <span class="box-text">Disease<br>Detector</span> <!-- Text for Disease Detector -->
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <!-- Add more social media icons as needed --> 
+        </div>
+        <div class="contact-info">
+            <p>Email: kitadokterjadi2an@gmail.com</p>
+            <p>Phone: 123-456-7890</p>
+            <!-- Add more contact information as needed -->
+        </div>
+    </footer>
+</body>
+</html>

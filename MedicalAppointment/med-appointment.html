@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HonestPedia</title>
+    <link rel="stylesheet" href="med-appointment.css">
+    <script src="https://kit.fontawesome.com/c695495eed.js" crossorigin="anonymous"></script>
+    <script src="med-appointment.js"></script>
+    <style>
+        /* CSS tambahan untuk daftar pilihan yang dipilih */
+        .selected-options {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .selected-options p {
+            margin-bottom: 5px;
+        }
+
+        .selected-options ul {
+            padding-left: 20px;
+        }
+
+        .selected-options ul li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="navbar-item"></a>
+            <a href="../medrec/Home/Home.html" class="navbar-item"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="../Transaction/transaction.html" class="navbar-item"><i class="fa-solid fa-file-invoice"></i>Notification</a>
+            <div class="navbar-item search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class="fa-solid fa-search"></i></button>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <a href="../Login/login.php" class="navbar-item">Sign In</a>
+            <a href="../Login/register.php" class="navbar-item">Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="page-title">
+        <h1>Medical Appointment</h1>
+    </div>
+
+    <div class="container">
+        <form id="appointmentForm" action="med-appointment.php" method="post">
+            <div class="appointment-item">
+                <label for="hospitalBranch">Choose Hospital Branch:</label>
+                <select id="hospitalBranch" name="hospitalBranch">
+                    <option value="Hospital A">Hospital A</option>
+                    <option value="Hospital B">Hospital B</option>
+                    <option value="Hospital C">Hospital C</option>
+                </select>
+            </div>
+            <hr>
+            <div class="appointment-item">
+                <label for="specialization">Choose Specialization:</label>
+                <select id="specialization" name="specialization">
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Dermatology">Dermatology</option>
+                    <option value="Orthopedics">Orthopedics</option>
+                    <!-- Add more specializations as needed -->
+                </select>
+            </div>
+            <hr>
+            <div class="appointment-item">
+                <label for="appointmentDate">Choose Date:</label>
+                <input type="date" id="appointmentDate" name="appointmentDate">
+            </div>
+        </form>
+    </div>
+    
+    <!-- Appointment Form -->
+    <div class="make-appointment-button">
+        <button type="submit" form="appointmentForm">Make Appointment Now</button>
+    </div>
+    
+
+    <!-- Area untuk menampilkan pilihan yang dipilih -->
+    <div class="selected-options">
+        <p>Selected Options:</p>
+        <ul id="selectedOptionsList"></ul>
+    </div>
+
+    <div id="hospitalBranchPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeHospitalBranchPopup()">&times;</span>
+            <p>Select Hospital Branch:</p>
+            <ul>
+                <li onclick="selectHospital('Hospital A')">Hospital A</li>
+                <li onclick="selectHospital('Hospital B')">Hospital B</li>
+                <li onclick="selectHospital('Hospital C')">Hospital C</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="specializationPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeSpecializationPopup()">&times;</span>
+            <p>Select Specialization:</p>
+            <ul>
+                <li onclick="selectSpecialization('Cardiology')">Cardiology</li>
+                <li onclick="selectSpecialization('Dermatology')">Dermatology</li>
+                <li onclick="selectSpecialization('Orthopedics')">Orthopedics</li>
+                <!-- Add more specializations as needed -->
+            </ul>
+        </div>
+    </div>
+
+    <div id="dateCalendar" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeDateCalendar()">&times;</span>
+            <p>Select Date:</p>
+            <input type="date" id="selectedDate">
+            <button onclick="selectDate()">Confirm</button>
+        </div>
+    </div>
+
+    <div id="appointmentConfirmationPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeAppointmentConfirmationPopup()">&times;</span>
+            <p>Are you sure you want to make this appointment?</p>
+            <button onclick="makeAppointment()">Yes</button>
+            <button onclick="closeAppointmentConfirmationPopup()">No</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="contact-info">
+            <p>Email: example@example.com</p>
+            <p>Phone: 123-456-7890</p>
+        </div>
+    </footer>
+
+</body>
+</html>
